@@ -5,7 +5,7 @@ from PIL import Image
 import pandas as pd
 import streamlit as st
 
-# Tesseract'ın kurulu olduğu yolu belirtme
+# Streamlit Cloud üzerinde Tesseract'ın kurulu olduğu yolu belirtme
 pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
 
 # Geçici olarak sayfa görüntülerini kaydedecek dizin oluşturma
@@ -75,4 +75,4 @@ if uploaded_file is not None:
         excel_path = 'converted_file.xlsx'
         df.to_excel(excel_path, index=False)
         with open(excel_path, 'rb') as f:
-            st.download_button('Download Excel file', f, file_name='converted_file.xlsx')
+            st.download_button('Download Excel file',
