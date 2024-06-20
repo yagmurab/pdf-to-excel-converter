@@ -6,7 +6,7 @@ import pandas as pd
 import streamlit as st
 
 # Tesseract'ın kurulu olduğu yolu belirtme
-pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
+pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
 
 # Geçici olarak sayfa görüntülerini kaydedecek dizin oluşturma
 os.makedirs('temp_images', exist_ok=True)
@@ -36,7 +36,7 @@ def process_pdf(pdf_file):
                     borc = parts[-3]
                     alacak = parts[-2]
                     bakiye = parts[-1]
-                    data.append([hesap_kodu, hesap_adi, borc, alacak, bakiye])
+                    data.append([hesap_kodu, hesap_adi, borç, alacak, bakiye])
 
     # Geçici dizini ve içindeki dosyaları silme
     for root, dirs, files in os.walk('temp_images', topdown=False):
