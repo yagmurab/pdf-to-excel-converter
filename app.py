@@ -6,7 +6,7 @@ import pandas as pd
 import streamlit as st
 
 # Tesseract'ın kurulu olduğu yolu belirtme
-pytesseract.pytesseract.tesseract_cmd = 'C://Program Files//Tesseract-OCR//tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 
 # Geçici olarak sayfa görüntülerini kaydedecek dizin oluşturma
 os.makedirs('temp_images', exist_ok=True)
