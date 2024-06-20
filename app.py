@@ -33,7 +33,7 @@ def process_pdf(pdf_file):
                 if len(parts) >= 4:
                     hesap_kodu = parts[0]
                     hesap_adi = ' '.join(parts[1:-3])
-                    borc = parts[-3]
+                    borç = parts[-3]
                     alacak = parts[-2]
                     bakiye = parts[-1]
                     data.append([hesap_kodu, hesap_adi, borç, alacak, bakiye])
@@ -75,4 +75,4 @@ if uploaded_file is not None:
         excel_path = 'converted_file.xlsx'
         df.to_excel(excel_path, index=False)
         with open(excel_path, 'rb') as f:
-            st.download_button('Download Excel file',
+            st.download_button('Download Excel file', f, file_name='converted_file.xlsx')
