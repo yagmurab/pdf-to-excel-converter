@@ -1,5 +1,5 @@
 streamlit
-pymupdf
 pytesseract
-pillow
+Pillow
+pymupdf
 pandas
