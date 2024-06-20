@@ -1,5 +1,6 @@
+pandas
+openpyxl
 streamlit
 pytesseract
 Pillow
-pymupdf
-pandas
+PyMuPDF
